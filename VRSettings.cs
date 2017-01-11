@@ -7,9 +7,7 @@ namespace UnityEngine.VR {
             set { }
         }
 
-        public static bool isDeviceActive {
-            get { return false; }
-        }
+        public static bool isDeviceActive { get; } = false;
 
         public static bool showDeviceView {
             get { return false; }
@@ -21,27 +19,14 @@ namespace UnityEngine.VR {
             set { }
         }
 
-        public static int eyeTextureWidth {
-            get { return 0; }
-        }
+        public static int eyeTextureWidth { get; } = 0;
 
-        public static int eyeTextureHeight {
-            get { return 0; }
-        }
+        public static int eyeTextureHeight { get; } = 0;
 
-//    /// <summary>
-//    ///   <para>Controls the texel:pixel ratio before lens correction, trading performance for sharpness.</para>
-//    /// </summary>
-//    public static float renderViewportScale {
-//      get {
-//        return UnityEngine.VR.VRSettings.renderViewportScaleInternal;
-//      }
-//      set {
-//        VRSettings.renderViewportScaleInternal = value;
-//      }
-//    }
-//
-//    internal static float renderViewportScaleInternal {  }
+        public static float renderViewportScale {
+            get { return 0f; }
+            set { }
+        }
 
         [Obsolete("loadedDevice is deprecated.  Use loadedDeviceName and LoadDeviceByName instead.")]
         public static VRDeviceType loadedDevice {
@@ -49,18 +34,12 @@ namespace UnityEngine.VR {
             set { }
         }
 
-        public static string loadedDeviceName {
-            get { return ""; }
-        }
+        public static string loadedDeviceName { get; } = "";
 
-        public static string[] supportedDevices {
-            get { return new string[0]; }
-        }
+        public static string[] supportedDevices { get; } = new string[0];
 
-        public static void LoadDeviceByName(string deviceName) {
-        }
+        public static void LoadDeviceByName(string deviceName) {}
 
-        public static void LoadDeviceByName(string[] prioritizedDeviceNameList) {
-        }
+        public static void LoadDeviceByName(string[] prioritizedDeviceNameList) {}
     }
 }
